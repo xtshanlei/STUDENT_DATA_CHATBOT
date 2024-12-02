@@ -18,7 +18,7 @@ class QueryOutput(TypedDict):
     query: Annotated[str, ..., "Syntactically valid SQL query."]
 
 # Sidebar for API key and information
-openai_api_key = "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"
+openai_api_key = hidden
 
 # Initialize the LLM and database connection
 if openai_api_key:
