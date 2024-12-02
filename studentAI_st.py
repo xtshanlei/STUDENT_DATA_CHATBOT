@@ -5,7 +5,7 @@ from langchain import hub
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 from typing_extensions import TypedDict, Annotated
 
-st.title("💬 SQL Database Chatbot")
+st.title("💬 Students Database Chatbot")
 
 # Define State and QueryOutput classes
 class State(TypedDict):
