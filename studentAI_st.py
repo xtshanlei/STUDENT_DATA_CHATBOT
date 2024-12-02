@@ -17,12 +17,10 @@ class State(TypedDict):
 class QueryOutput(TypedDict):
     query: Annotated[str, ..., "Syntactically valid SQL query."]
 
-# Sidebar for API key and information
-openai_api_key = st.secrets.openai_api_key
 
 # Initialize the LLM and database connection
 if openai_api_key:
-    llm = ChatOpenAI(model="gpt-4o-mini", api_key=openai_api_key)
+    llm = ChatOpenAI(model="gpt-4o-mini", api_key=st.secrets.openai_api_key)
     db_path = 'student_database.db'
     db_uri = f"sqlite:///{db_path}"
     db = SQLDatabase.from_uri(db_uri)
