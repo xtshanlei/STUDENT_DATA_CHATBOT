@@ -21,7 +21,7 @@ class QueryOutput(TypedDict):
 
 # Initialize the LLM and database connection
 if st.secrets.openai_api_key:
-    llm = ChatOpenAI(model="gpt-4o-mini", api_key=st.secrets.openai_api_key)
+    llm = ChatOpenAI(model="gpt-4o", api_key=st.secrets.openai_api_key)
     db_path = 'student_database.db'
     db_uri = f"sqlite:///{db_path}"
     db = SQLDatabase.from_uri(db_uri)
