@@ -3,4 +3,5 @@ langchainhub
 langgraph
 langchain_community
 openai
+langchain-openai
 typing-extensions
