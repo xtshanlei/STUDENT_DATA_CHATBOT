@@ -94,6 +94,9 @@ if prompt := st.chat_input("Ask a question about the student database"):
     state.update(write_query(state))
     state.update(execute_query(state))
     state.update(generate_answer(state))
+# Append generated SQL query to chat messages
+    st.session_state.messages.append({"role": "assistant", "content": f"Generated SQL Query:\n{state['query']}"})
+    st.chat_message("assistant").write(f"Generated SQL Query:\n{state['query']}")
 
     # Append assistant's response
     response = state["answer"]
