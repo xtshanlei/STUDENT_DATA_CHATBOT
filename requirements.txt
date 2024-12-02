@@ -1,5 +1,6 @@
-streamlit==1.25.0  # Version at the time of writing; use the latest if needed
 langchain
+langchainhub
+langgraph
 langchain_community
 openai
 typing-extensions
